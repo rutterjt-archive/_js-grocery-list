@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
 <body>
-<h1>Hello World</h1>
+<div id="app">
+  <h1 class="heading">Grocery List</h1>
+  <ul class="list">
+    <li class="list-item">
+      <input id="item0" type="checkbox">
+      <label for="item0">
+        No list items...
+      </label>
+    </li>
+    <li class="list-item">
+      <input id="item1" type="checkbox">
+      <label for="item1">
+        No list items...
+      </label>
+    </li>
+    <li class="list-item">
+      <input id="item2" type="checkbox">
+      <label for="item2">
+        No list items...
+      </label>
+    </li>
+  </ul>
+  <form class="list-form">
+    <input type="text" name="item">
+    <input type="submit" value="Add Item">
+  </form>
+  <div class="list-buttons">
+    <button type="button">Check All</button>
+    <button type="button">Uncheck All</button>
+    <button type="button">Clear List</button>  
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>
