@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
 <body>
-<h1>Hello World</h1>
+<div id="app">
+  <h1 class="heading">Grocery List</h1>
+  <ul class="list">
+  </ul>
+  <form id="list-form">
+    <input id="list-input" type="text" name="item" required>
+    <input id="add-item" type="submit" value="Add Item">
+  </form>
+  <div class="list-buttons">
+    <button id="list-remove" type="button">Remove Checked Items</button>
+    <button id="list-clear" type="button">Clear List</button>  
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>
