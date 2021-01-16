@@ -2,18 +2,13 @@ const groceryList = document.querySelector(".list");
 const listForm = document.querySelector("#list-form");
 const listInput = document.querySelector("#list-input");
 const listClear = document.querySelector("#list-clear");
-const listUncheck = document.querySelector("#list-clear");
-const listCheck = document.querySelector("#list-check");
-
+const defaultItems = {name: "Add items below...", checked: false};
 const items = JSON.parse(localStorage.getItem("items")) || [];
 console.log(items);
 
-// Need functions to: add an item to the collection of items
-// Update the list in the HTML
-// Toggle check/uncheck a single item
-// Check / uncheck all items
-// Clear the list
-
+// Need functions to: 
+// Check / uncheck single item
+// Remove checked items
 
 function addItem(e) {
   e.preventDefault();
@@ -28,25 +23,32 @@ function addItem(e) {
   this.reset();
 }
 
+function toggleCheck(e) {
+  if (!e.target.matches("input")) return;
+  const index = e.target.dataset.index;
+  items[index].checked = !items[index].checked
 
+}
 
 function updateDisplay(list, items = []) {
-  groceryList.innerHTML = items.map((item, index) => {
-    return `
+  groceryList.innerHTML = items.reduce((acc, item, index) => {
+    return acc + `
       <li class="list-item">
-        <input id="item${index}" type="checkbox" ${item.checked ? "checked" : "" }>
+        <input id="item${index}" type="checkbox" data-index="${index}" ${item.checked ? "checked" : "" }>
         <label for="item${index}">${item.name}</label>
       </li>
     `;
-  }).join("");
+  }, ``);
 }
 
 function clearList() {
   items.length = 0;
   localStorage.removeItem("items");
-  updateDisplay(groceryList, items);
+  updateDisplay(groceryList, [defaultItems]);
 }
 
 if (items.length !== 0) updateDisplay(groceryList, items);
+else updateDisplay(groceryList, [defaultItems]);
 listForm.addEventListener("submit", addItem);
 listClear.addEventListener("click", clearList);
+groceryList.addEventListener("click", toggleCheck);
