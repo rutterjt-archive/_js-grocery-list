@@ -50,6 +50,8 @@ function clearList() {
   updateDisplay(groceryList);
 }
 
+if (items.length > 0) updateDisplay(groceryList, items);
+
 listForm.addEventListener("submit", addItem);
 groceryList.addEventListener("click", toggleCheck);
 clearListBtn.addEventListener("click", clearList);
