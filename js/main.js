@@ -1,8 +1,8 @@
-const groceryList = document.querySelector(".list");
+const groceryList = document.querySelector("#list");
 const listForm = document.querySelector("#list-form");
 const listInput = document.querySelector("#list-input");
-const removeCheckedBtn = document.querySelector("#clear-checked");
-const clearListBtn = document.querySelector("#clear-list");
+const removeCheckedBtn = document.querySelector("#remove-checked");
+// const clearListBtn = document.querySelector("#clear-list");
 let items = JSON.parse(localStorage.getItem("items")) || [];
 
 // Renders the list in HTML
@@ -44,15 +44,15 @@ function removeChecked() {
 }
 
 // Clears entire list
-function clearList() {
-  items.length = 0;
-  localStorage.removeItem("items");
-  updateDisplay(groceryList);
-}
+// function clearList() {
+//   items.length = 0;
+//   localStorage.removeItem("items");
+//   updateDisplay(groceryList);
+// }
 
 if (items.length > 0) updateDisplay(groceryList, items);
 
 listForm.addEventListener("submit", addItem);
 groceryList.addEventListener("click", toggleCheck);
-clearListBtn.addEventListener("click", clearList);
+// clearListBtn.addEventListener("click", clearList);
 removeCheckedBtn.addEventListener("click", removeChecked);

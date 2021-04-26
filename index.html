@@ -5,31 +5,38 @@
     <title>Grocery List App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
+    <!-- Favicon was generated from a Twemoji emoji. Copyright 2020 Twitter, Inc and other contributors. Licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script defer src="js/main.js"></script>
+    <script defer src="js/main.js" type="text/javascript"></script>
   </head>
 <body>
 
 <main id="app" class="app">
 
-  <header class="app__header">
+  <header class="app__header app__row">
     <h1 class="app__title">Grocery List</h1>
-    <p class="app__sub-title">Add items below</p>
-
+    <!-- <p class="app__sub-title">Add items below</p> -->
   </header>
 
-  <ul class="app__list">
+  <ul id="list" class="app__list app__row">
     <li class="app__list-item">
       <input type="checkbox" data-index=0 id="item0" class="app__checkbox">
+      <label for="item0" class="app__item-label">Add items below...</label>
     </li>
   </ul>
 
-  <form id="app__form">
+  <form id="list-form" class="app__form app__row">
     <input id="list-input" type="text" name="item" required class="app__form-text">
     <input id="add-item" type="submit" value="Add Item" class="app__submit">
   </form>
   
-  <div class="app__buttons">
+  <div class="app__buttons app__row">
     <button id="check-all" type="button" class="app__button">Check All</button>
     <button id="uncheck-all" type="button" class="app__button">Uncheck All</button>  
     <button id="remove-checked" type="button" class="app__button">Remove Checked</button>  
@@ -37,9 +44,9 @@
 
 </main>
 
-<footer class="footer">
+<!-- <footer class="footer">
   <p class="footer__text">Designed and built with love by <a href="https://github.com/jonrutter" class="footer__link" rel="noreferrer">Jon Rutter</a>. © 2020-2021.</p>
-</footer>
+</footer> -->
 
 </body>
 </html>
