@@ -1,29 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-us">
   <head>
     <meta charset="UTF-8">
     <title>Grocery List App</title>
-    <meta name="viewport" content="width=device,width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <!-- Favicon was generated from a Twemoji emoji. Copyright 2020 Twitter, Inc and other contributors. Licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="css/style-min.css" type="text/css">
+    <script defer src="js/main-min.js" type="text/javascript"></script>
   </head>
 <body>
-<div id="app">
-  <h1 class="heading">Grocery List</h1>
-  <ul class="list">
-    <li>
-      <input type="checkbox" data-index=0 id="item0">
-      <label for="item0">Add items below...</label>
-    </li>
-</ul>
-  <form id="list-form">
-    <input id="list-input" type="text" name="item" required>
-    <input id="add-item" type="submit" value="Add Item">
-  </form>
-  <div class="list-buttons">
-    <button id="clear-checked" type="button">Remove Checked Items</button>
-    <button id="clear-list" type="button">Clear List</button>  
+
+<main id="app" class="app__wrapper">
+  <div class="app">
+    <header class="app__row header">
+      <h1 class="header__title">Grocery List</h1>
+      <!-- <p class="header__sub-title">Add items below</p> -->
+    </header>
+  
+    <ul id="list" class="app__row list">
+      <!-- <li class="list__item">
+        <input type="checkbox" data-index=0 id="item0" class="list__checkbox">
+        <label for="item0" class="list__text">Add items below...</label>
+      </li> -->
+    </ul>
+  
+    <form id="list-form" class="app__row form">
+      <label for="list-input" class="form__label">Add item:</label>
+      <div class="form__input-wrap">
+        <input id="list-input" type="text" name="item" required class="form__text">
+        <input id="add-item" type="submit" value="Add Item" class="form__submit">  
+      </div>
+    </form>
+    
+    <div class="app__buttons">
+      <button id="check-all" type="button" class="button">Check All</button>
+      <button id="uncheck-all" type="button" class="button">Uncheck All</button>  
+      <button id="remove-checked" type="button" class="button">Remove Checked</button>  
+    </div>  
   </div>
-</div>
-<script src="js/main.js"></script>
+</main>
+
+<!-- <footer class="footer">
+  <p class="footer__text">Designed and built with love by <a href="https://github.com/jonrutter" class="footer__link" rel="noreferrer">Jon Rutter</a>. © 2020-2021.</p>
+</footer> -->
+
 </body>
 </html>
