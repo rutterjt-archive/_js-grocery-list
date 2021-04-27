@@ -18,8 +18,11 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
   margin: 0;
-  background: url("../media/background.jpg") fixed no-repeat center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+  background-image: url('../images/background-sm.jpg');
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -145,9 +148,20 @@ button,
 /* || Media Queries */
 
 @media screen and (min-width: 568px) {
+  body {
+    background-image: url('../images/background-md.jpg'); 
+  }
+
   .app,
   .footer {
     width: 60%;
     padding: 2rem;
   }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url('../images/background-lg.jpg');
+  }
+
 }
