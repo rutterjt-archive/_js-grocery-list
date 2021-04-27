@@ -17,31 +17,34 @@
   </head>
 <body>
 
-<main id="app" class="app">
-
-  <header class="app__header app__row">
-    <h1 class="app__title">Grocery List</h1>
-    <!-- <p class="app__sub-title">Add items below</p> -->
-  </header>
-
-  <ul id="list" class="app__list app__row">
-    <li class="app__list-item">
-      <input type="checkbox" data-index=0 id="item0" class="app__checkbox">
-      <label for="item0" class="app__item-label">Add items below...</label>
-    </li>
-  </ul>
-
-  <form id="list-form" class="app__form app__row">
-    <input id="list-input" type="text" name="item" required class="app__form-text">
-    <input id="add-item" type="submit" value="Add Item" class="app__submit">
-  </form>
+<main id="app" class="app__wrapper">
+  <div class="app">
+    <header class="app__row header">
+      <h1 class="header__title">Grocery List</h1>
+      <!-- <p class="header__sub-title">Add items below</p> -->
+    </header>
   
-  <div class="app__buttons app__row">
-    <button id="check-all" type="button" class="app__button">Check All</button>
-    <button id="uncheck-all" type="button" class="app__button">Uncheck All</button>  
-    <button id="remove-checked" type="button" class="app__button">Remove Checked</button>  
+    <ul id="list" class="app__row list">
+      <!-- <li class="list__item">
+        <input type="checkbox" data-index=0 id="item0" class="list__checkbox">
+        <label for="item0" class="list__text">Add items below...</label>
+      </li> -->
+    </ul>
+  
+    <form id="list-form" class="app__row form">
+      <label for="list-input" class="form__label">Add item:</label>
+      <div class="form__input-wrap">
+        <input id="list-input" type="text" name="item" required class="form__text">
+        <input id="add-item" type="submit" value="Add Item" class="form__submit">  
+      </div>
+    </form>
+    
+    <div class="app__row app__buttons">
+      <button id="check-all" type="button" class="button">Check All</button>
+      <button id="uncheck-all" type="button" class="button">Uncheck All</button>  
+      <button id="remove-checked" type="button" class="button">Remove Checked</button>  
+    </div>  
   </div>
-
 </main>
 
 <!-- <footer class="footer">

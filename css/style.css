@@ -64,13 +64,21 @@ button,
 
 /* || App */
 
-
-.app {
-  height: auto;
+.app__wrapper {
   width: 100%;
+  max-width: 992px;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  min-width: 300px;
+  width: 80%;
+  max-width: 768px;
   display: flex;
   flex-direction: column;
 }
@@ -79,61 +87,101 @@ button,
   margin-bottom: 2rem;
 }
 
-.app__title {
+.app__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+
+/* || Header */
+
+.header__title {
   text-align: center;
   font-size: 2rem;
   font-weight: normal;
   margin-bottom: 1rem;
 }
 
-.app__list {
+
+/* || List */
+.list {
+}
+
+.list__item {
   margin-bottom: 1rem;
 }
 
-.app__list-item {
-  margin: 1rem;
-}
-
-.app__checkbox:checked + label {
+.list__checkbox:checked + label {
   text-decoration: line-through;
   opacity: 0.5;
 }
 
+/* || Form */
 
-.app__form {
+.form {
+}
+
+.form__input-wrap {
   display: flex;
   flex-direction: row;
-  margin-bottom: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
-.app__buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+.form__label {
+  display: block;
+  margin-bottom: 2px;
 }
 
-.app__submit,
-.app__button,
-.app__form-text {
+.form__text,
+.form__submit,
+.button {
   -webkit-appearance: none;
   padding: 0.5rem;
   border: 1px #BBBBBB solid;
-  border-radius: 3px;
   background-color: #FFFFFF;
   font-family: inherit;
   outline: none;
 }
 
-.app__submit,
-.app__button {
+.form__text {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;  
+}
+
+.form__text:focus {
+  border-color: green;
+  box-shadow: 0px 0px 2px green;
+}
+
+
+.form__submit {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;  
+}
+
+.form__submit,
+.button {
   cursor: pointer;
   background-color: #EEEEEE;
 }
-.app__submit:hover,
-.app__button:hover {
+.form__submit:hover,
+.button:hover {
   background-color: #CCCCCC;
+}
+
+/* || Button */
+
+.button {
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 
@@ -152,7 +200,7 @@ button,
     background-image: url('../images/background-md.jpg'); 
   }
 
-  .app,
+  .app__wrapper,
   .footer {
     width: 60%;
     padding: 2rem;

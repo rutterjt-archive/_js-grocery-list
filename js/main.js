@@ -9,9 +9,9 @@ let items = JSON.parse(localStorage.getItem("items")) || [];
 function updateDisplay(list, items = []) {
   list.innerHTML = items.reduce((acc, item, index) => {
     return acc + `
-      <li class="list-item">
-        <input id="item${index}" type="checkbox" data-index="${index}" ${item.checked ? "checked" : "" }>
-        <label for="item${index}">${item.name}</label>
+      <li class="list__item">
+        <input id="item${index}" type="checkbox" data-index="${index}" ${item.checked ? "checked" : "" } class="list__checkbox">
+        <label for="item${index}" class="list__text">${item.name}</label>
       </li>
     `;
   }, ``);
