@@ -32,7 +32,6 @@ body {
 
 h1 {
   font-size: 2rem;
-  margin: 0 0.67rem;
 }
 
 ul {
@@ -101,7 +100,6 @@ button,
   text-align: center;
   font-size: 2rem;
   font-weight: normal;
-  margin-bottom: 1rem;
 }
 
 
@@ -154,8 +152,7 @@ button,
 }
 
 .form__text:focus {
-  border-color: green;
-  box-shadow: 0px 0px 2px green;
+  border-color: #2a642a;
 }
 
 
