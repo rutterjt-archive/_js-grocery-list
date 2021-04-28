@@ -93,8 +93,7 @@ button,
 }
 
 .app {
-  min-width: 300px;
-  width: 80%;
+  width: 100%;
   max-width: 768px;
   display: -webkit-box;
   display: -ms-flexbox;
