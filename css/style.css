@@ -175,7 +175,7 @@ button,
 .form__submit,
 .button {
   -webkit-appearance: none;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: 1px #BBBBBB solid;
   background-color: #FFFFFF;
   font-family: inherit;
